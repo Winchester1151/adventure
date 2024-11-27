@@ -1,0 +1,1010 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat';
+    color: #252424;
+    overflow-x: hidden;
+}
+.header {
+    background-image: url('https://s3-alpha-sig.figma.com/img/a860/c4cb/b7bd7ca24588e4daf82034f2236e667d?Expires=1733097600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Kvi2I-JSX-joAUoZKEh0L65lFG4PT-eoE~bEtt-ETITuXv64esIIYIxXjC5nk8JS14FYsQCMsdARls9~GRpI3QQhDEpf~bnsDrdyhaSlf0WlG5RMfnTtUv0rWn2K3FpK0hw4nJKWdh0xx4f3dF790nRGknqaBN6EoG~9qC3SYtXZNoedJRA1HKmiwDjuWnlgUA6dWhvs059Z7T1v5cl4RhDmAi6Ha0wC7-QlQpyVBwVisSnMp9kygh3~uQi0EOFjyM7x4UR2a4bwxr7~aZRHCAmDhLfASGhjP1MChUSU0ALdBid5gl6UjK1d4xVLdeXR6ufoMBP~3GCRcI3RIrf-1Q__');
+    background-size: cover;
+    background-position: center top; /* Изначальная позиция фона (по центру по горизонтали и сверху по вертикали) */
+    background-repeat: no-repeat;
+    height: 80vh;
+    text-align: center;
+}
+
+.header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    font-size: 16px;
+}
+.header nav a {
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 400;
+    color: #252424;
+    transition: color 0.3s ease;
+}
+.header nav a:hover {
+    color: #000000;
+}
+.logo {
+    margin-left: 25px; 
+}
+
+.menu {
+    display: flex;
+    justify-content: center; 
+    flex-grow: 1;
+    align-items: center;
+    margin-left: 55px;
+}
+.header nav a.contact {
+    background-color: #FAA64B;
+    padding: 10px 20px;
+    border-radius: 16px;
+    margin-left: 80px;
+    width: 10%;
+}
+.header nav a.contact:hover {
+    box-shadow: 0 0 20px #d1893d;
+}
+.header .content {
+    position: absolute;
+    top: 38%;
+    left: 22%;
+    transform: translate(-50%, -50%);
+    text-align: left; /* Выравнивание текста по левому краю */
+    margin-left: 50px; /* Отступ слева, чтобы отдалить содержимое от края */
+    margin-right: 50px; 
+}
+.header .content h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+.header .content p {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+.header .content .btn {
+    background-color: #FAA64B;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 16px;
+    font-size: 20px;
+    cursor: pointer;
+    width: 50%;
+    color: #252424;
+    transition: transform 0.3s ease; 
+}
+.header .content .btn:hover {
+    transform: scale(1.1); /* Увеличение кнопки на 10% при наведении */
+}
+@media (max-width: 376px) {
+    .header {
+        background-image: url('https://s3-alpha-sig.figma.com/img/4542/f0fa/0649c603063e9daa6c22e2c00f9e611c?Expires=1733702400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=CF4R80KrTQGG98WRmBJW7hQvv5wjN81h39BUxOWHo1tEGQSbx1Lc0kRodkse02hq0bLwRzSt5tijxlHVgd2zoTuKqc~K2GpriT2NuDwrYCYUOwqHAw317u0DHnVs8lZwMwv-C5IX0YGvzJ1dshUYqsqVDcFCdzQq2FqP8ROTGe5IQrcwP1wymOIy2lAbicktx2Gpyj4q-arE-0nOs40gxZ-KfMGFHDVilzAVeNct1gXu45dH-Y3zEdD0W7TxznqOCJ~VWHU3bs~64Yvqu80NQ0zQ~Wjx2ypUHuxRDlexhohTEpDyBJEQSX4XqYF38FSAJv2YkKzNBiUwVub7DSI2VQ__');
+    }
+    .menu {
+        display: none; /* Скрыть меню */
+    }
+
+    .header nav {
+        display: flex;
+        align-items: center; /* Центрируем элементы вертикально */
+        justify-content: space-between; /* Располагаем элементы по краям */
+        padding: 10px 20px;
+        flex-wrap: nowrap; /* Убедиться, что элементы не переносятся */
+    }
+
+    /* Гамбургер меню */
+    .hamburger {
+        display: flex; /* Гамбургер видим */
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 20px;
+        cursor: pointer;
+        margin-right: 15px;
+    }
+
+    .hamburger div {
+        width: 100%; /* Ширина линии */
+        height: 2px; /* Толщина линии */
+        background-color: #252424; /* Цвет */
+        border-radius: 4px; /* Закруглённые края */
+        transition: all 0.3s ease; /* Плавность анимации */
+    }
+
+    .logo {
+        text-align: center; /* Центрируем текст */
+        display: flex;
+        margin: 0 auto; /* Убираем смещение и выравниваем по центру */
+        line-height: 1.4; /* Немного увеличиваем высоту строк для читаемости */
+        white-space: normal; /* Разрешаем перенос строк */
+    }
+
+    .contact {
+        margin-left: auto; /* Перемещаем кнопку вправо */
+        background-color: #FAA64B; /* Цвет фона */
+        color: #ffffff; /* Цвет текста */
+        text-align: center; /* Центрируем текст внутри кнопки */
+        padding: 10px 20px; /* Увеличиваем внутренние отступы для текста */
+        border-radius: 16px; /* Закругленные края */
+        display: inline-block; /* Убедиться, что кнопка адаптируется к содержимому */
+        white-space: nowrap; /* Запрещаем перенос текста */
+        font-size: 14px; /* Размер текста */
+        line-height: 1.2; /* Высота строки для компактного текста */
+        min-width: fit-content; /* Кнопка занимает только необходимую ширину */
+    }
+
+
+    /* Центрирование контента */
+    .header .content {
+        position: static;
+        margin: 20px auto;
+        text-align: center; /* Центрирование текста */
+        transform: none;
+    }
+
+    .header .content h1 {
+        font-size: 30px;
+        margin-top: 60px;
+        margin-bottom: 50px;
+    }
+    .spamtik {
+        display: none;
+    }
+
+    .header .content p {
+        font-size: 14px;
+        word-wrap: break-word; /* Позволяет словам переходить на следующую строку */
+        line-height: 1.6; /* Увеличиваем межстрочный интервал для улучшения читаемости */
+        width: 90%; /* Ограничиваем ширину параграфа, чтобы текст не растягивался по всему экрану */
+        margin: 0 auto; /* Центрируем параграф */
+    }
+    .header .content br {
+        display: none;
+    }
+
+    .header .content .btn {
+        margin: 0 auto;
+        display: block;
+        margin-top: 50px;
+        width: 80%; /* Увеличение ширины кнопки */
+    }
+
+    .menu {
+        display: none; /* Меню скрыто по умолчанию */
+    }
+
+    .menu.active {
+        display: block; /* Показываем меню при активации */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.95);
+        padding: 10px 0; /* Убираем лишний фон */
+        z-index: 1000;
+    }
+
+    .menu a {
+        display: block;
+        padding: 5px 10px;
+        text-align: center;
+    }
+
+
+    /* Анимация появления меню */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: scaleY(0.95);
+        }
+        to {
+            opacity: 1;
+            transform: scaleY(1);
+        }
+    }
+
+    .menu.active {
+        animation: fadeIn 0.3s ease-out;
+    }
+
+    /* Анимация текста */
+    @keyframes textFadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .menu.active a {
+        opacity: 0;
+        animation: textFadeIn 0.5s ease-out forwards;
+    }
+    
+}
+
+.about {
+    background-color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+.about h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.about-content img {
+    width: 400px;
+    height: 295px;
+    border-radius: 16px;
+}
+.about-text {
+    max-width: 500px;
+    text-align: left;
+}
+.about-text h3 {
+    font-size: 35px;
+    margin-bottom: 10px;
+    color: #2355A7;
+}
+.about-text p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #252424;
+}
+.about-stats {
+    display: flex;
+    gap: 20px;
+}
+.about-stats div {
+    text-align: center;
+    padding: 20px;
+    margin-left: 27px;
+}
+.about-stats div h3 {
+    font-size: 35px;
+    margin: 0;
+}
+.about-stats div p {
+    font-size: 1em;
+    margin: 0;
+    color: #252424;
+}
+@media screen and (max-width: 376px) {
+    .about-content {
+        flex-direction: column; /* Расположить элементы вертикально на мобильных устройствах */
+    }
+    .about-content h2 {
+        font-size: 34px;
+    }
+
+    .about-content img {
+        width: 100%; /* Сделать изображение на всю ширину экрана */
+        height: auto; /* Сохранить пропорции изображения */
+    }
+
+    .about-stats {
+        display: flex;
+        flex-wrap: wrap; /* Дать возможность элементам "статистики" располагаться в несколько строк */
+        justify-content: space-between; /* Равномерно распределить элементы */
+        gap: 10px;
+    }
+
+    .about-stats div {
+        text-align: center;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .about-text {
+        max-width: 100%; /* Текст должен занимать всю ширину */
+        text-align: start; /* Выравнивание текста по левому краю */
+    }
+
+    .about-text h3, .about-text p {
+        margin: 10px 0;
+    }
+
+    .about-stats div h3 {
+        font-size: 30px; /* Уменьшить размер шрифта для мобильных устройств */
+    }
+
+    .about-stats div p {
+        font-size: 14px; /* Уменьшить размер шрифта для мобильных устройств */
+    }
+}
+
+.buttontours {
+    text-align: center;
+    
+}
+.buttontours h2 {
+    font-size: 40px;
+}
+.ourbuttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+
+}
+.selectbutton {
+    border-radius: 16px;
+    background-color: #D9D9D9;
+    border: none;
+    cursor: pointer;
+    width: 242px;
+    height: 60px;
+    margin: 0 10px;
+    font-size: 16px;
+    color: #222;
+    transition: transform 0.3s ease; 
+}
+.selectbutton:hover {
+    transform: scale(1.1);
+}
+.searchbutton {
+    border-radius: 16px;
+    background-color: #FAA64B;
+    border: none;
+    cursor: pointer;
+    width: 242px;
+    height: 60px;
+    margin: 0 10px;
+    font-size: 20px;
+    color: #222;
+    font-weight: bolder;
+    transition: transform 0.3s ease; 
+}
+.searchbutton:hover {
+    transform: scale(1.1);
+}
+@media (max-width: 376px) {
+    .buttontours h2 {
+        font-size: 35px; /* Уменьшаем размер текста */
+    }
+
+    .ourbuttons {
+        flex-direction: column;
+    }
+
+    .selectbutton,
+    .searchbutton {
+        width: 80%; /* Делаем ширину кнопок динамичной */
+        max-width: 300px;
+        margin: 10px; /* Максимальная ширина */
+    }
+}
+
+
+
+
+.bodycard {
+    font-family: 'Montserrat';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+
+}
+.card-container {
+    display: flex;
+    gap: 20px;
+}
+.card {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card .overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.8); /* Полупрозрачный белый цвет */
+    text-align: center;
+}
+.card .overlay h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #333;
+    font-weight: 500;
+    text-align: start;
+}
+.card .overlay .info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 5px;
+}
+.card .overlay .info span {
+    color: #666;
+    font-size: 23px;
+}
+.card .overlay .info i {
+    font-size: 20px;
+    color: #333;
+}
+img.maps {
+    width: 24px;
+    height: 24px;
+}
+img.like {
+    width: 22px;
+    height: 22px;
+}
+@media (max-width: 376px) {
+    .card-container {
+        display: block; /* Оставляем одну карточку */
+    }
+
+    .card {
+        width: 95%;
+        height: 90%; /* Карточка занимает всю ширину экрана */
+        max-width: 400px; /* Ограничение ширины для больших мобильных устройств */
+        margin: 0 auto; /* Центрирование карточки */
+        aspect-ratio: 2 / 3; /* Высота пропорциональна ширине */
+    }
+
+    .card:nth-child(n+2) {
+        display: none; /* Скрываем все карточки, кроме первой */
+    }
+
+    .card .overlay {
+        padding: 15px;
+    }
+
+    .card .overlay h3 {
+        font-size: 20px; /* Уменьшение шрифта для мобильных */
+    }
+
+    .card .overlay .info span {
+        font-size: 24px; /* Уменьшение шрифта для чисел */
+    }
+
+    .card .overlay .info i {
+        font-size: 24px;
+    }
+    .card .overlay .info {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+    .flex-items-center-space-x-1 {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img {
+    vertical-align: middle;
+    display: inline-block;
+    height: auto;
+    max-width: 100%;
+}
+
+.maintext {
+    font-size: 40px;
+    text-align: center;
+}
+main {
+    width: 600px;
+    margin: auto;
+    display: flex;
+}
+div.column {
+    width: 33.33%;
+    max-width: 600px;
+    margin: 0 5px;
+    display: flex;
+    flex-direction: column;
+}
+div.column img {
+    width: 100%;
+    margin: 5px 0;
+    border-radius: 10px;
+    object-fit: cover;
+} 
+div.column img.colspan-2 {
+    height: 50vh;
+}
+div.column img.colspan-1 {
+    height: 30vh;
+}
+div.column img.colspan-3 {
+    height: 26vh;
+}
+/* Медиазапрос для мобильных устройств */
+/* Медиазапрос для мобильных устройств */
+@media screen and (max-width: 768px) {
+    main {
+        width: 100%; /* Сделать ширину основного контейнера на всю ширину экрана */
+        display: block; /* Разделить на вертикальные блоки */
+        margin: 0;
+    }
+    .maintext h2 {
+        font-size: 35px;
+    }
+    div.column {
+        width: 95%; /* Каждая колонка будет занимать всю ширину экрана */
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column; /* Колонки вертикально */
+    }
+
+    div.column img {
+        width: 50%; /* Изображения занимают всю ширину экрана */
+        height: auto; /* Высота изображений будет автоматически подстраиваться */
+    }
+
+    div.column img.colspan-1, 
+    div.column img.colspan-2,
+    div.column img.colspan-3 {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Показываем только два изображения, скрывая третье */
+    div.column:nth-child(1) {
+        display: none; /* Скрыть третий блок с изображением */
+    }
+    div.column:nth-child(2) {
+        display: none; /* Скрыть третий блок с изображением */
+    }
+}
+
+
+
+
+.bodycomment {
+    margin: 10;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+    text-align: center;
+    max-width: 100%;
+    width: 80%;
+
+}
+.comments-title {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.comment-box {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative; /* Позволяет использовать абсолютное позиционирование для дочерних элементов */
+    max-width: calc(100% - 150px); /* Уменьшаем ширину, чтобы оставить место для suitcase */
+    margin-right: 15s0px; /* Отступ справа, чтобы визуально отделить от suitcase */
+}
+.comment-content {
+    display: flex;
+    align-items: center;
+    margin-left: 60px;
+}
+.comment-content img {
+    border-radius: 50%;
+    width: 121px;
+    height: 121px;
+    margin-right: 20px;
+}
+.comment-text {
+    text-align: left;
+}
+.comment-text h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+.comment-text p {
+    margin: 5px 0 0 0;
+    font-size: 16px;
+    color: #222;
+}
+.pagination {
+    margin-top: 20px; /* Минимальный отступ от карточек */
+    display: flex;
+    justify-content: center;
+    margin-bottom: 150px;
+    gap: 8px; /* Расстояние между точками */
+}
+
+.pagination i {
+    display: block;
+    font-size: 10px;
+    color: #d3d3d3;
+}
+
+.pagination i.active {
+    color: #a3c4f3;
+}
+.suitcase {
+    width: 535px;
+    height: 373px;
+    position: absolute;
+    margin-left: 850px;
+    margin-top: 200px;
+}
+@media (max-width: 376px) {
+    .comment-box {
+        margin: auto;
+        width: 100%;
+        height: 50%;
+        max-width: 400px;
+    }
+    .comment-content {
+        flex-direction: column; /* Изменяем расположение элементов на вертикальное */
+        align-items: center; 
+        justify-content: center;
+        margin-left: 0; /* Убираем отступ слева */
+    }
+
+    .comment-content img {
+        width: 100px; /* Уменьшаем размер изображения */
+        height: 100px;
+        margin-right: 0px; /* Убираем отступ справа */
+        margin-bottom: 10px;
+    }
+
+    .comment-text p {
+        font-size: 14px;
+        color: #222;
+        text-align: start;
+        margin: 10px;
+    }
+
+    .comments-title {
+        font-size: 35px;
+        margin-bottom: 15px;
+        text-align: center; /* Выравниваем заголовок по центру */
+        width: 100%; /* Убедимся, что заголовок не выходит за границы */
+    }
+
+    .pagination {
+        justify-content: center; /* Центрируем точки пагинации */
+        gap: 6px;
+    }
+
+    .pagination i {
+        font-size: 6px;
+    }
+
+    /* 6. Скрываем изображение чемодана */
+    .suitcase {
+        display: none;
+    }
+
+    /* 7. Убедимся, что контейнер не выходит за пределы */
+    .container {
+        width: 100%; /* Убедимся, что контейнер не выходит за границы */
+        padding: 0 10px; /* Добавляем немного отступов по бокам */
+        box-sizing: border-box;
+    }
+
+    /* 8. Центрируем текст в блоке .comment-text */
+    .comment-text {
+        text-align: center; /* Выравниваем текст по центру */
+        width: 100%; /* Блок занимает всю ширину */
+    }
+}
+
+
+.whywe {
+    text-align: center;
+}
+.whywe h2 {
+    font-size: 40px;
+}
+.whywe img {
+    width: 100%; /* Максимальная ширина изображения на больших экранах */
+    height: auto; /* Сохраняем пропорции изображения */
+}
+@media (max-width: 376px) {
+    .whywe h2 {
+        font-size: 35px; /* Уменьшение размера текста */
+    }
+
+    .whywe img {
+        max-width: 100%; 
+        height: 100%;
+    }
+}
+
+.wrapper1 {
+    max-width: 75%;
+    margin: auto;
+    font-family: 'Montserrat';
+    margin-bottom: 100px;
+}
+.wrapper1 h2 {
+    font-size: 40px;
+}
+.wrapper1 > p, .wrapper1 > h2 {
+    margin: 1.5rem 0;
+    text-align: center;
+}
+.wrapper1 > h2 {
+    letter-spacing: 3px;
+}
+.accordion {
+    background-color: white;
+    color: #222;
+    font-family: 'Montserrat';
+    cursor: pointer;
+    font-size: 20px;
+    width: 100%;
+    padding: 2rem 2.5rem;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-weight: bolder;
+}
+.accordion i {
+    font-size: 1.6rem;
+    width: 36.89px;
+    height: 36.89px;
+    color: #F7F7F7;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #FF9F46;
+    transition: transform 0.3s; /* Добавляем переход для анимации поворота */
+}
+
+.accordion i.active {
+    transform: rotate(45deg); /* Поворот иконки */
+}
+.active, .accordion:hover {
+    background-color: #F7F7F7;
+}
+.pannel {
+    max-height: 0; /* Начальное значение max-height */
+    padding: 0 2rem; /* Убираем нижний отступ */
+    background-color: #F7F7F7;
+    overflow: hidden; /* Скрываем содержимое */
+    transition: max-height 0.4s ease, padding 0.4s ease; /* Переход для max-height и padding */
+}
+
+.pannel.open {
+    max-height: 200px; /* Увеличьте это значение, если нужно больше места для текста */
+    padding: 0 2rem 2.5rem 2rem; /* Восстанавливаем нижний отступ */
+}
+.pannel p {
+    margin-left: 8px;
+}
+.faq {
+    margin: 10px 0;
+}
+.faq.active {
+    border: none;
+}
+
+@media (max-width: 768px) {
+    .wrapper1 {
+        max-width: 90%;
+    }
+    .accordion {
+        font-size: 16px;
+        padding: 1.5rem;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        text-align: left;
+        border-radius: 16px;
+    }
+    .faq {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 16px;
+    }
+.accordion i {
+    width: 22px;
+    height: 22px; /* Убедимся, что размеры круга равны */
+    font-size: 1rem;
+    background-color: #FF9F46;
+    color: #F7F7F7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: transform 0.3s;
+    flex-shrink: 0;
+    line-height: 22px; /* Совмещаем line-height с высотой, чтобы центрировать текст */
+    text-align: center; /* Гарантируем центрирование текста */
+}
+
+    
+    .accordion i.active {
+        transform: rotate(45deg);
+    }
+    .active, .accordion:hover {
+        background-color: #F7F7F7;
+    }
+    .pannel {
+        padding: 0 1.5rem;
+        max-height: 0;
+        overflow: hidden;
+        background-color: #F7F7F7;
+        transition: max-height 0.4s ease, padding 0.4s ease;
+    }
+    .pannel.open {
+        padding: 0 1.5rem 2rem 1.5rem;
+        max-height: 200px;
+    }
+    .pannel p {
+        margin-left: 0;
+        font-size: 14px;
+    }
+}
+
+
+
+.bodyfooter {
+    margin: 0;
+    font-family: 'Montserrat';
+    background-color: #C5EBFF82; /* Цвет фона */
+    color: #000; 
+}
+
+.footer {
+    background-color: #C5EBFF82;
+    padding: 20px 40px;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.logofoot {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #000; /* Черный цвет для лого */
+}
+
+.navfoot {
+    display: flex;
+    gap: 20px;
+    font-weight: 400px;
+}
+
+.navfoot a {
+    text-decoration: none; /* Убирает подчеркивание */
+    color: #000; /* Черный цвет ссылок */
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.navfoot a:hover {
+    color: #555; /* Более темный оттенок для эффекта при наведении */
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    padding: 20px;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+    flex: 1;
+    text-align: center;
+}
+
+.footer-left {
+    text-align: left;
+}
+
+.footer-right {
+    text-align: right;
+}
+.footer-center {
+    text-decoration: underline;
+}
+.footer a {
+    text-decoration: none; 
+    color: #000;
+}
+
+.footer a:hover {
+    color: #555; /* Более темный оттенок при наведении */
+    text-decoration: none; /* Не подчеркивать при наведении */
+}
+@media (max-width: 768px) {
+    /* Разделим футер на два столбца */
+    .footer-top {
+        display: flex;
+        flex-wrap: wrap; /* Позволяет элементам "переломиться" в несколько строк */
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    /* Логотип в левом столбце */
+    .logofoot {
+        text-align: left;
+        margin-bottom: 15px;
+        font-size: 1.2rem; /* Меньше размер для мобильных */
+        flex: 1 1 100%; /* Занимает всю ширину в левой колонке */
+        font-weight: bolder;
+    }
+
+    /* Меню навигации */
+    .navfoot {
+        display: flex;
+        flex-direction: column; /* Ссылки вертикально */
+        gap: 10px;
+        text-align: left;
+        flex: 1 1 100%; /* Меню также будет занимать всю ширину */
+        margin-bottom: 15px;
+    }
+
+    /* Контактная информация (второй столбец) */
+    .footer-bottom {
+        display: flex;
+        flex-direction: column; /* Элементы вертикально */
+        gap: 10px;
+        align-items: center;
+    }
+
+    /* Выравнивание для footer-left, footer-center, footer-right */
+    .footer-left, .footer-center, .footer-right {
+        flex: 1;
+        text-align: center;
+    }
+
+    .footer-center {
+        text-decoration: underline;
+    }
+}
